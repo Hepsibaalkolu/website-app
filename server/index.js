@@ -4,7 +4,14 @@ const cors = require("cors");
 const UserModel = require('./models/Users');
 
 const app = express();
-app.use(cors());
+app.use(cors(
+    
+    {
+        origin: 'https://websiteapp-1whq.vercel.app',
+        methods: true,
+        credentials: true
+}
+));
 app.use(express.json());
 
 mongoose.connect(
@@ -26,8 +33,12 @@ app.post("/createUser", async (req,res)=>{
     res.json(user);
 })
 
+app.get("/",(req, res)=>{
+    res.send("Server is Rinning")
+})
 
-app.listen(4800, ()=>{
-    console.log("server is listening");
+const port = 4800;
+app.listen(port, ()=>{
+    console.log(`server is listening on ${port}`);
     
 })
