@@ -7,7 +7,8 @@ const app = express();
 app.use(cors(
     
     {
-        origin: ['https://website-app-1whq.vercel.app'],
+        // origin: ['https://website-app-1whq.vercel.app'], https://website-app-frontend.vercel.app/
+        origin: ['https://website-app-frontend.vercel.app'],
         methods: true,
         credentials: true
     }
