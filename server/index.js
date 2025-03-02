@@ -7,7 +7,7 @@ const app = express();
 app.use(cors(
     
     {
-        origin: ["http://localhost:5173", 'https://website-app-client.vercel.app'],
+        origin: ['https://website-app-1whq.vercel.app'],
         methods: true,
         credentials: true
     }
@@ -42,5 +42,6 @@ app.listen(port, ()=>{
     console.log(`server is listening on ${port}`);
     
 })
-
+//"http://localhost:5173", 
+//https://website-app-client.vercel.app
 // https://website-app-1whq.vercel.app
