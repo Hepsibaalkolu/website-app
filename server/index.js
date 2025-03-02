@@ -15,7 +15,7 @@ app.use(cors(
 app.use(express.json());
 
 mongoose.connect(
-    "mongodb+srv://hema:hema123@cluster0.tgbx8.mongodb.net/mern?retryWrites=true&w=majority&appName=Cluster0"
+    "mongodb://127.0.0.1:27017/mern"
 );
 
 app.get("/getUser", (req, res) => {
