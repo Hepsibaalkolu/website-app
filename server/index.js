@@ -33,9 +33,9 @@ app.post("/createUser", async (req,res)=>{
     res.json(user);
 })
 
-app.get("/",(req, res)=>{
-    res.send("Server is Rinning")
-})
+// app.get("/",(req, res)=>{
+//     res.send("Server is Rinning")
+// })
 
 const port = 4800;
 app.listen(port, ()=>{
