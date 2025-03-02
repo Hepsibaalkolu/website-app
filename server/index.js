@@ -42,3 +42,16 @@ app.listen(port, ()=>{
     console.log(`server is listening on ${port}`);
     
 })
+
+// {
+//     "vercel": 2,
+//     "builds": [
+//         {"src": "*.js", "use": "vercel/node"}
+//     ],
+//     "routes": [
+//         {
+//             "src": "/(.*)",
+//             "dest": "/"
+//         }
+//     ]
+// }
