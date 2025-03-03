@@ -13,24 +13,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(cors(
-    
-    // {
-    //     // origin: ["http://localhost:5173",'https://website-app-1whq.vercel.app'],
-        
-    //     origin: ['https://website-app-client.vercel.app'],
-        
-    //     methods: true,
-    //     credentials: true,
-    //     methods: ['GET', 'POST'],
-    //     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
-    // }
-    // {
-    //     origin: 'https://website-app-client.vercel.app',
-    //     methods: ['GET', 'POST'],
-    //     credentials: true
-    // }
-));
 
 app.use(express.json());
 
