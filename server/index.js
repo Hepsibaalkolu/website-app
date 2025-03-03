@@ -4,6 +4,8 @@ const cors = require("cors");
 const UserModel = require('./models/Users');
 
 const app = express();
+app.options('*', cors());
+
 app.use(cors(
     
     {
@@ -18,6 +20,7 @@ app.use(cors(
         allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
     }
 ));
+
 app.use(express.json());
 
 mongoose.connect(
