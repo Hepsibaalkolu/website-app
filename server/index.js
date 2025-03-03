@@ -10,7 +10,7 @@ app.use(cors(
         // origin: ["http://localhost:5173",'https://website-app-1whq.vercel.app'],
         // origin: ['https://website-app-frontend.vercel.app'],
         
-        origin: 'https://website-app-client.vercel.app',
+        origin: ["http://localhost:5173",'https://website-app-client.vercel.app'],
         
         methods: true,
         credentials: true
