@@ -8,16 +8,21 @@ app.options('*', cors());
 
 app.use(cors(
     
-    {
-        // origin: ["http://localhost:5173",'https://website-app-1whq.vercel.app'],
+    // {
+    //     // origin: ["http://localhost:5173",'https://website-app-1whq.vercel.app'],
         
-        origin: ['https://website-app-client.vercel.app'],
+    //     origin: ['https://website-app-client.vercel.app'],
         
-        methods: true,
-        credentials: true,
+    //     methods: true,
+    //     credentials: true,
+    //     methods: ['GET', 'POST'],
+    //     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
+    // }
+    app.use(cors({
+        origin: 'https://website-app-client.vercel.app',
         methods: ['GET', 'POST'],
-        allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
-    }
+        credentials: true
+    }))
 ));
 
 app.use(express.json());
@@ -26,7 +31,7 @@ mongoose.connect(
     "mongodb+srv://hema:hema123@cluster0.tgbx8.mongodb.net/mern?retryWrites=true&w=majority&appName=Cluster0"
 );
 
-app.get("https://website-app-client.vercel.app/getUser", (req, res) => {
+app.get("/getUser", (req, res) => {
     UserModel.find({}).then(function(users) {
         res.json(users)
     }).catch(function(err) {
@@ -34,7 +39,7 @@ app.get("https://website-app-client.vercel.app/getUser", (req, res) => {
     })
 })
 
-app.post("https://website-app-client.vercel.app/createUser", async (req,res)=>{
+app.post("/createUser", async (req,res)=>{
     const user = req.body;
     const newUser = new UserModel(user);
     await newUser.save();
@@ -50,3 +55,8 @@ app.listen(port, ()=>{
 //https://website-app-client.vercel.app
 // https://website-app-1whq.vercel.app
 
+// "scripts": {
+//     "test": "echo \"Error: no test specified\" && exit 1",
+//     "start": "nodemon index.js"
+    
+//   },

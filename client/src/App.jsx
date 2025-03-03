@@ -9,7 +9,7 @@ function App() {
 
   useEffect(()=> {
     // axios.get('http://localhost:4800/getUser')
-    axios.get('https://website-app-server.vercel.app/getUser')
+    axios.get('https://website-app-server.vercel.app/getUser', { withCredentials: true })
     .then((users) =>{
       setUsers(users.data)
     })
@@ -18,7 +18,7 @@ function App() {
 
   const Submit = () => {
     // axios.post('http://localhost:4800/createUser', {name, age})
-    axios.post('https://website-app-server.vercel.app/createUser', {name, age})
+    axios.post('https://website-app-server.vercel.app/createUser', { withCredentials: true }, {name, age})
     .then((users) =>{
       console.log(users)
     })
