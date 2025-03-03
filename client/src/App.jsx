@@ -8,8 +8,8 @@ function App() {
   const [age , setAge] = useState()
 
   useEffect(()=> {
-    axios.get('http://localhost:4800/getUser')
-    // axios.get('https://website-app-backend.vercel.app/getUser')
+    // axios.get('http://localhost:4800/getUser')
+    axios.get('https://website-app-server.vercel.app/getUser')
     .then((users) =>{
       setUsers(users.data)
     })
@@ -17,8 +17,8 @@ function App() {
   },[])
 
   const Submit = () => {
-    axios.post('http://localhost:4800/createUser', {name, age})
-    // axios.post('https://website-app-backend.vercel.app/createUser', {name, age})
+    // axios.post('http://localhost:4800/createUser', {name, age})
+    axios.post('https://website-app-server.vercel.app/createUser', {name, age})
     .then((users) =>{
       console.log(users)
     })
