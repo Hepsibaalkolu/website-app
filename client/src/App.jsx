@@ -8,8 +8,8 @@ function App() {
   const [age , setAge] = useState()
 
   useEffect(()=> {
-    // axios.get('http://localhost:4800/getUser')
-    axios.get('https://website-app-backend.vercel.app/getUser')
+    axios.get('http://localhost:4800/getUser')
+    // axios.get('https://website-app-backend.vercel.app/getUser')
     .then((users) =>{
       setUsers(users.data)
     })
