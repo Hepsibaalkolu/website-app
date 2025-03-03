@@ -49,3 +49,18 @@ app.listen(port, ()=>{
 //"http://localhost:5173", 
 //https://website-app-client.vercel.app
 // https://website-app-1whq.vercel.app
+
+
+//vercel.json
+// {
+//     "rewrites": [
+//       {
+//         "source": "/api/(.*)",
+//         "destination": "/server/$1"
+//       },
+//       {
+//         "source": "/(.*)",
+//         "destination": "/client/$1"
+//       }
+//     ]
+//   }
