@@ -17,8 +17,8 @@ function App() {
   },[])
 
   const Submit = () => {
-    // axios.post('http://localhost:4800/createUser', {name, age})
-    axios.post('https://website-app-backend.vercel.app/createUser', {name, age})
+    axios.post('http://localhost:4800/createUser', {name, age})
+    // axios.post('https://website-app-backend.vercel.app/createUser', {name, age})
     .then((users) =>{
       console.log(users)
     })
