@@ -6,15 +6,15 @@ const UserModel = require('./models/Users');
 const app = express();
 app.use(cors(
     
-    // {
-    //     // origin: ['https://website-app-1whq.vercel.app'], https://website-app-frontend.vercel.app/
-    //     // origin: ['https://website-app-frontend.vercel.app'],
+    {
+        origin: ["http://localhost:5173",'https://website-app-1whq.vercel.app'],
+        // origin: ['https://website-app-frontend.vercel.app'],
         
-    //     origin: 'https://website-app-frontend.vercel.app',
+        // origin: 'https://website-app-frontend.vercel.app',
         
-    //     methods: true,
-    //     credentials: true
-    // }
+        methods: true,
+        credentials: true
+    }
 ));
 app.use(express.json());
 
