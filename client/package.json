@@ -1,7 +1,6 @@
 {
   "name": "client",
   "private": true,
-  "proxy": "https://website-app-server.vercel.app:4800",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

@@ -25,11 +25,11 @@ app.use(cors(
     //     methods: ['GET', 'POST'],
     //     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
     // }
-    app.use(cors({
+    {
         origin: 'https://website-app-client.vercel.app',
         methods: ['GET', 'POST'],
         credentials: true
-    }))
+    }
 ));
 
 app.use(express.json());
