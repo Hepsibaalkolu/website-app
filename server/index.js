@@ -10,7 +10,7 @@ app.use(cors(
         // origin: ["http://localhost:5173",'https://website-app-1whq.vercel.app'],
         // origin: ['https://website-app-frontend.vercel.app'],
         
-        origin: ["http://localhost:5173",'https://website-app-client.vercel.app'],
+        origin: ['https://website-app-client.vercel.app'],
         
         methods: true,
         credentials: true
@@ -35,10 +35,6 @@ app.post("/createUser", async (req,res)=>{
     const newUser = new UserModel(user);
     await newUser.save();
     res.json(user);
-})
-
-app.get("/",(req, res)=>{
-    res.send("Server is Rinning")
 })
 
 const port = 4800;
